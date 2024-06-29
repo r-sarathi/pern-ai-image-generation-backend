@@ -55,4 +55,4 @@ const createPost = async (req, res) => {
   }
 };
 
-export { fetchPosts };
+export { fetchPosts, createPost };
