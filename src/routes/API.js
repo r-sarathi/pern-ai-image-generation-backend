@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { createPost, fetchPosts } from "../controllers/PostController";
-import { createImage } from "../controllers/DallEController";
+import { createPost, fetchPosts } from "../controllers/PostController.js";
+import { createImage } from "../controllers/DallEController.js";
 
 const router = Router();
 

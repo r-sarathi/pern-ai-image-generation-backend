@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { v2 as cloudinary } from "cloudinary";
+import APIRoutes from "./src/routes/API.js";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -15,6 +16,8 @@ cloudinary.config({
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
+
+app.use("/api/v1", APIRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running up on http://localhost:${PORT}`);
